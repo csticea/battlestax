@@ -34,7 +34,7 @@ export default function NewGame() {
           variant="contained"
           color="primary"
         >
-          start new game
+          This is a textSecondary
         </Button>
         {/* let's show an error message if there is one */}
         {idError && (
