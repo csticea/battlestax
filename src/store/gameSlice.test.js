@@ -42,18 +42,18 @@ describe("game slice", () => {
   });
 
   it("should create a new game", async () => {
-    fetchMock.postOnce("*", {
-      body: { documentId: "DANG" },
-    });
-    store.dispatch(createGame());
-    const initialState = store.getState();
-    expect(selectGame(initialState).idError).toEqual("");
-    expect(selectGame(initialState).idLoading).toEqual(true);
-    expect(selectGame(initialState).id).toEqual("");
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    const finalState = store.getState();
-    expect(selectGame(finalState).idError).toEqual("");
-    expect(selectGame(finalState).idLoading).toEqual(false);
-    expect(selectGame(finalState).id).toEqual("DANG");
+  fetchMock.postOnce("*", {
+    body: { documentId: "DANG" },
   });
+  store.dispatch(createGame());
+  const initialState = store.getState();
+  expect(selectGame(initialState).idError).toEqual("");
+  expect(selectGame(initialState).idLoading).toEqual(true);
+  expect(selectGame(initialState).id).toEqual("");
+  await new Promise((resolve) => setTimeout(resolve, 500));
+  const finalState = store.getState();
+  expect(selectGame(finalState).idError).toEqual("");
+  expect(selectGame(finalState).idLoading).toEqual(false);
+  expect(selectGame(finalState).id).toEqual("DANG");
+});
 });
