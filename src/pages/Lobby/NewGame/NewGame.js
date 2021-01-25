@@ -14,7 +14,7 @@ export default function NewGame() {
       <Grid item>
         <Typography color="textSecondary">welcome to</Typography>
         <Typography variant="h4" style={{ marginBottom: 64 }}>
-          BattleStax
+          Best Game Ever
         </Typography>
         <Typography color="textSecondary">game code</Typography>
         <Typography variant="h1" className="highlight">
